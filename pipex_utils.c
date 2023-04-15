@@ -6,7 +6,7 @@
 /*   By: ffarkas <ffarkas@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 00:10:48 by ffarkas           #+#    #+#             */
-/*   Updated: 2023/04/15 12:34:05 by ffarkas          ###   ########.fr       */
+/*   Updated: 2023/04/15 15:38:35 by ffarkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_usage(void)
 {
 	ft_putstr_fd("usage: ./pipex infile cmd1 cmd2 ... cmdn outfile\n", 2);
-	ft_putstr_fd("		 ./pipex here_doc LIMITER cmd1 cmd2 ... cmdn outfile\n", 2);
+	ft_putstr_fd("       ./pipex here_doc LIMITER cmd1 cmd2 ... cmdn outfile\n", 2);
 	exit(1);
 }
 

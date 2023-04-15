@@ -6,7 +6,7 @@
 /*   By: ffarkas <ffarkas@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 00:11:16 by ffarkas           #+#    #+#             */
-/*   Updated: 2023/04/15 03:38:46 by ffarkas          ###   ########.fr       */
+/*   Updated: 2023/04/15 12:37:43 by ffarkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,14 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 
-char	*ft_get_env_var(char **env);
-char	*ft_get_cmd_path(char *cmd, char **env);
+void	ft_append_here_doc(char **av, int *p_fd);
+void	ft_here_doc(char **av);
 void	ft_run_command(char *cmd, char **env);
 void	ft_pipeline(char *cmd, char **env, int *i);
-void	ft_usage(int status);
+void	ft_usage(void);
 int		ft_open_file(char *file, int mode);
+char	*ft_get_env_var(char **env);
+char	*ft_get_cmd_path(char *cmd, char **env);
 void	ft_clear_tab(char **tab);
 
 #endif
