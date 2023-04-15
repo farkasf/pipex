@@ -15,7 +15,8 @@
 void	ft_usage(void)
 {
 	ft_putstr_fd("usage: ./pipex infile cmd1 cmd2 ... cmdn outfile\n", 2);
-	ft_putstr_fd("       ./pipex here_doc LIMITER cmd1 cmd2 ... cmdn outfile\n", 2);
+	ft_putstr_fd("       ./pipex here_doc LIMITER \
+		cmd1 cmd2 ... cmdn outfile\n", 2);
 	exit(1);
 }
 
@@ -31,7 +32,8 @@ int	ft_open_file(char *file, int mode)
 		fd = open(file, O_WRONLY | O_CREAT | O_APPEND, 0777);
 	if (fd == -1)
 	{
-		ft_putstr_fd(ft_strjoin(ft_strjoin("pipex: failed to open file: ", file), "\n"), 2);
+		ft_putstr_fd(ft_strjoin(ft_strjoin("pipex: failed to \
+			open file: ", file), "\n"), 2);
 		exit(1);
 	}
 	return (fd);
