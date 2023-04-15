@@ -6,7 +6,7 @@
 /*   By: ffarkas <ffarkas@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 00:10:37 by ffarkas           #+#    #+#             */
-/*   Updated: 2023/04/15 12:29:04 by ffarkas          ###   ########.fr       */
+/*   Updated: 2023/04/15 17:00:01 by ffarkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ void	ft_run_command(char *cmd, char **env)
 	{
 		ft_putstr_fd(ft_strjoin("pipex: command not found: ", \
 			single_cmd[0]), 2);
+		ft_putstr_fd(ft_strjoin(ft_strjoin("pipex: ", single_cmd[0]), \
+			": command not found\n"), 2);
 		ft_putstr_fd("\n", 2);
 		ft_clear_tab(single_cmd);
 		exit(0);
