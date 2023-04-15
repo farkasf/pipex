@@ -22,7 +22,8 @@ void	ft_append_here_doc(char **av, int *p_fd)
 	while (1)
 	{
 		buffer = ft_get_next_line(0);
-		if (ft_strncmp(buffer, av[2], limit_len) == 0 && buffer[limit_len] != '\0')
+		if (ft_strncmp(buffer, av[2], limit_len) == 0 \
+			&& buffer[limit_len] != '\0')
 		{
 			free(buffer);
 			exit(0);
@@ -61,7 +62,8 @@ void	ft_run_command(char *cmd, char **env)
 	path = ft_get_cmd_path(single_cmd[0], env);
 	if (execve(path, single_cmd, env) == -1)
 	{
-		ft_putstr_fd(ft_strjoin("pipex: command not found: ", single_cmd[0]), 2);
+		ft_putstr_fd(ft_strjoin("pipex: command not found: ", \
+			single_cmd[0]), 2);
 		ft_putstr_fd("\n", 2);
 		ft_clear_tab(single_cmd);
 		exit(0);
