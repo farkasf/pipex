@@ -6,7 +6,7 @@
 /*   By: ffarkas <ffarkas@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 00:10:48 by ffarkas           #+#    #+#             */
-/*   Updated: 2023/04/15 16:56:32 by ffarkas          ###   ########.fr       */
+/*   Updated: 2023/04/15 18:15:41 by ffarkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_open_file(char *file, int mode)
 	if (fd == -1)
 	{
 		ft_putstr_fd(ft_strjoin(ft_strjoin("pipex: ", file), \
-			": No such file or directory\n"), 2);
+			": failed to open file\n"), 2);
 		exit(1);
 	}
 	return (fd);
