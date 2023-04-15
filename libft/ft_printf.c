@@ -34,7 +34,7 @@ int	ft_get_param(va_list *args, char format)
 	return (length);
 }
 
-int	ft_printf (const char *input, ...)
+int	ft_printf(const char *input, ...)
 {
 	va_list	args;
 	char	*str;
