@@ -1,2 +1,2 @@
 # pipex
-Details in UNIX mechanisms
+*Many pipes make a pipeline*
