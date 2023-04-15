@@ -6,14 +6,16 @@
 /*   By: ffarkas <ffarkas@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 00:10:48 by ffarkas           #+#    #+#             */
-/*   Updated: 2023/04/15 03:36:51 by ffarkas          ###   ########.fr       */
+/*   Updated: 2023/04/15 12:34:05 by ffarkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_usage(int status)
+#include "pipex.h"
+
+void	ft_usage(void)
 {
-	if (status == 1)
-		ft_putstr_fd("usage: ./pipex infile cmd1 cmd2 ... cmdn outfile\n", 2);
+	ft_putstr_fd("usage: ./pipex infile cmd1 cmd2 ... cmdn outfile\n", 2);
+	ft_putstr_fd("		 ./pipex here_doc LIMITER cmd1 cmd2 ... cmdn outfile\n", 2);
 	exit(1);
 }
 
@@ -25,25 +27,14 @@ int	ft_open_file(char *file, int mode)
 		fd = open(file, O_RDONLY, 0777);
 	if (mode == 1)
 		fd = open(file, O_WRONLY | O_CREAT | O_TRUNC, 0777);
+	if (mode == 2)
+		fd = open(file, O_WRONLY | O_CREAT | O_APPEND, 0777);
 	if (fd == -1)
 	{
 		ft_putstr_fd(ft_strjoin(ft_strjoin("pipex: failed to open file: ", file), "\n"), 2);
 		exit(1);
 	}
 	return (fd);
-}
-
-void	ft_clear_tab(char **tab)
-{
-	size_t	i;
-
-	i = 0;
-	while (tab[i])
-	{
-		free(tab[i]);
-		i++;
-	}
-	free(tab);
 }
 
 char	*ft_get_env_var(char **env)
@@ -97,4 +88,17 @@ char	*ft_get_cmd_path(char *cmd, char **env)
 	ft_clear_tab(env_var_path);
 	ft_clear_tab(single_cmd);
 	return (cmd);
+}
+
+void	ft_clear_tab(char **tab)
+{
+	size_t	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
 }
