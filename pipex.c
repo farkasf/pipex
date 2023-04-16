@@ -23,7 +23,7 @@ void	ft_append_here_doc(char **av, int *p_fd)
 	{
 		buffer = ft_get_next_line(0);
 		if (ft_strncmp(buffer, av[2], limit_len) == 0 \
-&& buffer[limit_len] != '\0')
+			&& buffer[limit_len] != '\0')
 		{
 			free(buffer);
 			exit(0);

@@ -14,10 +14,9 @@
 
 void	ft_usage(void)
 {
-
-	ft_putstr_fd("pipex: usage:\n./pipex infile cmd1 \
+	ft_putstr_fd("pipex: usage: ./pipex infile cmd1 \
 cmd2 ... cmdn outfile\n", 2);
-	ft_putstr_fd("./pipex here_doc LIMITER \
+	ft_putstr_fd("              ./pipex here_doc LIMITER \
 cmd1 cmd2 ... cmdn outfile\n", 2);
 	exit(1);
 }
