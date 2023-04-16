@@ -77,9 +77,7 @@ char	*ft_get_cmd_path(char *cmd, char **env)
 	single_cmd = ft_split(cmd, ' ');
 	while (env_var_path[i])
 	{
-		file_path = ft_strjoin(env_var_path[i], "/");
-		cmd_path = ft_strjoin(file_path, single_cmd[0]);
-		free(file_path);
+		cmd_path = ft_strjoin(ft_strjoin(env_var_path[i], "/"), single_cmd[0]);
 		if (access(cmd_path, F_OK | X_OK) == 0)
 		{
 			ft_clear_arr(env_var_path);
@@ -89,7 +87,7 @@ char	*ft_get_cmd_path(char *cmd, char **env)
 		free(cmd_path);
 		i++;
 	}
-	ft_clear_arr(env_var_path);
+	ft_clear_arr(env_var_path)
 	ft_clear_arr(single_cmd);
 	return (cmd);
 }
