@@ -82,6 +82,7 @@ char	*ft_get_cmd_path(char *cmd, char **env)
 		free(file_path);
 		if (access(cmd_path, F_OK | X_OK) == 0)
 		{
+			ft_clear_tab(env_var_path);
 			ft_clear_tab(single_cmd);
 			return (cmd_path);
 		}

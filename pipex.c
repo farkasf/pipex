@@ -66,7 +66,6 @@ void	ft_run_command(char *cmd, char **env)
 ": command not found\n"), 2);
 		ft_putstr_fd("\n", 2);
 		ft_clear_tab(single_cmd);
-		free(path);
 		exit(0);
 	}
 }
