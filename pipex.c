@@ -6,7 +6,7 @@
 /*   By: ffarkas <ffarkas@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 00:10:37 by ffarkas           #+#    #+#             */
-/*   Updated: 2023/04/16 10:04:07 by ffarkas          ###   ########.fr       */
+/*   Updated: 2023/04/16 10:39:04 by ffarkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ void	ft_here_doc(char **av)
 	pid_t	pid;
 
 	if (pipe(p_fd) == -1)
-		exit(0);
+		exit(1);
 	pid = fork();
 	if (pid == -1)
-		exit(0);
+		exit(1);
 	if (pid == 0)
 		ft_append_here_doc(av, p_fd);
 	else
@@ -65,7 +65,7 @@ void	ft_run_command(char *cmd, char **env)
 		ft_putstr_fd(ft_strjoin(ft_strjoin("pipex: ", single_cmd[0]), \
 ": command not found\n"), 2);
 		ft_clear_arr(single_cmd);
-		exit(0);
+		exit(1);
 	}
 }
 
@@ -75,10 +75,10 @@ void	ft_pipeline(char *cmd, char **env, int *i)
 	int		p_fd[2];
 
 	if (pipe(p_fd) == -1)
-		exit(0);
+		exit(1);
 	pid = fork();
 	if (pid == -1)
-		exit(0);
+		exit(1);
 	if (pid == 0)
 	{
 		close(p_fd[0]);
