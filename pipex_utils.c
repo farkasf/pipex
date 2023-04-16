@@ -6,7 +6,7 @@
 /*   By: ffarkas <ffarkas@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 00:10:48 by ffarkas           #+#    #+#             */
-/*   Updated: 2023/04/16 00:04:16 by ffarkas          ###   ########.fr       */
+/*   Updated: 2023/04/16 10:04:19 by ffarkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,19 +82,19 @@ char	*ft_get_cmd_path(char *cmd, char **env)
 		free(file_path);
 		if (access(cmd_path, F_OK | X_OK) == 0)
 		{
-			ft_clear_tab(env_var_path);
-			ft_clear_tab(single_cmd);
+			ft_clear_arr(env_var_path);
+			ft_clear_arr(single_cmd);
 			return (cmd_path);
 		}
 		free(cmd_path);
 		i++;
 	}
-	ft_clear_tab(env_var_path);
-	ft_clear_tab(single_cmd);
+	ft_clear_arr(env_var_path);
+	ft_clear_arr(single_cmd);
 	return (cmd);
 }
 
-void	ft_clear_tab(char **tab)
+void	ft_clear_arr(char **tab)
 {
 	size_t	i;
 

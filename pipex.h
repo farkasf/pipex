@@ -6,7 +6,7 @@
 /*   By: ffarkas <ffarkas@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 00:11:16 by ffarkas           #+#    #+#             */
-/*   Updated: 2023/04/15 12:37:43 by ffarkas          ###   ########.fr       */
+/*   Updated: 2023/04/16 10:04:21 by ffarkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ void	ft_usage(void);
 int		ft_open_file(char *file, int mode);
 char	*ft_get_env_var(char **env);
 char	*ft_get_cmd_path(char *cmd, char **env);
-void	ft_clear_tab(char **tab);
+void	ft_clear_arr(char **tab);
 
 #endif
