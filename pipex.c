@@ -64,7 +64,6 @@ void	ft_run_command(char *cmd, char **env)
 	{
 		ft_putstr_fd(ft_strjoin(ft_strjoin("pipex: ", single_cmd[0]), \
 ": command not found\n"), 2);
-		ft_putstr_fd("\n", 2);
 		ft_clear_arr(single_cmd);
 		exit(0);
 	}

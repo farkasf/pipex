@@ -69,7 +69,6 @@ char	*ft_get_cmd_path(char *cmd, char **env)
 	int		i;
 	char	*cmd_path;
 	char	**env_var_path;
-	char	*file_path;
 	char	**single_cmd;
 
 	i = 0;
@@ -87,7 +86,7 @@ char	*ft_get_cmd_path(char *cmd, char **env)
 		free(cmd_path);
 		i++;
 	}
-	ft_clear_arr(env_var_path)
+	ft_clear_arr(env_var_path);
 	ft_clear_arr(single_cmd);
 	return (cmd);
 }
