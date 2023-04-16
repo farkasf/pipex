@@ -6,7 +6,7 @@
 /*   By: ffarkas <ffarkas@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 00:10:48 by ffarkas           #+#    #+#             */
-/*   Updated: 2023/04/15 18:15:41 by ffarkas          ###   ########.fr       */
+/*   Updated: 2023/04/16 00:04:16 by ffarkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 void	ft_usage(void)
 {
-	ft_putstr_fd("usage: ./pipex infile cmd1 cmd2 ... cmdn outfile\n", 2);
-	ft_putstr_fd("       ./pipex here_doc LIMITER \
+
+	ft_putstr_fd("pipex: usage:\n./pipex infile cmd1 \
+cmd2 ... cmdn outfile\n", 2);
+	ft_putstr_fd("./pipex here_doc LIMITER \
 cmd1 cmd2 ... cmdn outfile\n", 2);
 	exit(1);
 }
@@ -33,7 +35,7 @@ int	ft_open_file(char *file, int mode)
 	if (fd == -1)
 	{
 		ft_putstr_fd(ft_strjoin(ft_strjoin("pipex: ", file), \
-			": failed to open file\n"), 2);
+": failed to open file\n"), 2);
 		exit(1);
 	}
 	return (fd);

@@ -6,7 +6,7 @@
 /*   By: ffarkas <ffarkas@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 00:10:37 by ffarkas           #+#    #+#             */
-/*   Updated: 2023/04/15 17:04:16 by ffarkas          ###   ########.fr       */
+/*   Updated: 2023/04/16 09:20:55 by ffarkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_append_here_doc(char **av, int *p_fd)
 	{
 		buffer = ft_get_next_line(0);
 		if (ft_strncmp(buffer, av[2], limit_len) == 0 \
-			&& buffer[limit_len] != '\0')
+&& buffer[limit_len] != '\0')
 		{
 			free(buffer);
 			exit(0);
@@ -63,7 +63,7 @@ void	ft_run_command(char *cmd, char **env)
 	if (execve(path, single_cmd, env) == -1)
 	{
 		ft_putstr_fd(ft_strjoin(ft_strjoin("pipex: ", single_cmd[0]), \
-			": command not found\n"), 2);
+": command not found\n"), 2);
 		ft_putstr_fd("\n", 2);
 		ft_clear_tab(single_cmd);
 		exit(0);
