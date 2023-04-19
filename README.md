@@ -25,7 +25,7 @@ This project is about creating a program that simulates a pipeline of commands s
 
 ### 2-process system
 <p align="center">
-  <img width="950" src="resources/two_processes">
+  <img width="950" src="resources/two_processes.png">
 </p>
 
 ### Pipeline system
