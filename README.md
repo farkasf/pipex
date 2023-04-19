@@ -21,4 +21,14 @@ This project is about creating a program that simulates a pipeline of commands s
 |----------------|-----------------------------------------------------------------|---------------------------------------------------------------|
 | one pipe       | <code>./pipex input cmd1 cmd2 output</code>                     | <code>input cmd1 \| cmd2 > output</code>                      |
 | multiple pipes | <code>./pipex input cmd1 cmd2 .. cmdn output</code>             | <code>input cmd1 \| cmd2 \| cmdn > output</code>              |
-| here_doc       | <code>./pipex here_doc LIMITER cmd1 cmd2 ... cmdn output</code> | <code>cmd << LIMITER \| cmd1 \| cmd2 \| cmdn >> output</code> |
+| here document  | <code>./pipex here_doc LIMITER cmd1 cmd2 ... cmdn output</code> | <code>cmd << LIMITER \| cmd1 \| cmd2 \| cmdn >> output</code> |
+
+### 2-process system
+<p align="center">
+  <img width="950" src="resources/two_processes">
+</p>
+
+### Pipeline system
+<p align="center">
+  <img width="950" src="resources/pipeline.png">
+</p>
