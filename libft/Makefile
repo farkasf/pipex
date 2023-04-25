@@ -52,7 +52,7 @@ OBJS = $(SRC:.c=.o)
 OBJS_B = $(SRC_B:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
 CC = cc
-INCL = libft.h
+INCL = .
 RLIB = ranlib
 CLIB = ar rc
 R = rm -f
