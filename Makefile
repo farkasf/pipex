@@ -5,7 +5,7 @@ OBJS = $(SRC:.c=.o)
 LIBFT = libft/libft.a
 CFLAGS = -Wall -Wextra -Werror
 CC = cc
-INCL = pipex.h
+INCL = .
 R = rm -f
 
 all: $(NAME)
