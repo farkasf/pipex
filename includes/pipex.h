@@ -6,14 +6,14 @@
 /*   By: ffarkas <ffarkas@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 00:11:16 by ffarkas           #+#    #+#             */
-/*   Updated: 2023/04/16 10:04:21 by ffarkas          ###   ########.fr       */
+/*   Updated: 2023/04/27 18:51:53 by ffarkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PIPEX_H
 # define PIPEX_H
 
-# include "./libft/libft.h"
+# include "../libft/libft.h"
 # include <unistd.h>
 # include <stdlib.h>
 # include <sys/wait.h>
